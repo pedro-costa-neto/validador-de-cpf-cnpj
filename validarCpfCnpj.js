@@ -40,7 +40,7 @@ function validarCpfCnpj(campo){
 		indice = valor.length == 11 ? 11 : 6;
 		digito = calculo % 11;
 		
-		if( valor.length === 11 && digito < 10 ){
+		if( valor.length === 11 && ( ( 11 - digito ) < 10 ) ){
 			digito = 11 - digito;
 		}
 		
